@@ -15,8 +15,7 @@
     "test:unit-no-only": "npm run test:unit -- --forbid-only",
     "test": "nyc npm run test:unit-no-only",
     "changelog:all": "conventional-changelog --config ./changelog.config.js -i CHANGELOG.md -s -r 0",
-    "changelog": "conventional-changelog --config ./changelog.config.js -i CHANGELOG.md -s",
-    "prepare": "husky install"
+    "changelog": "conventional-changelog --config ./changelog.config.js -i CHANGELOG.md -s"
   },
   "files": [
     "bin/*",
@@ -88,15 +87,11 @@
   },
   "dependencies": {
     "commander": "^8.3.0",
+    "generate-schema": "^2.6.0",
     "js-yaml": "^4.1.0",
     "jsonc-parser": "3.2.0",
     "lodash.camelcase": "^4.3.0",
     "marked": "^4.2.5",
     "mustache": "^4.2.0"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }
